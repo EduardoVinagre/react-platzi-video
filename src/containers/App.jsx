@@ -20,8 +20,8 @@ const App = () => {
       {initialState.mylist && initialState.mylist.length > 0 && (
         <Categories title="Mi lista">
           <Carousel>
-            {initialState.mylist.map(item=>(
-              <CarouselItem key={item.id} {...item}/>
+            {initialState.mylist.map((item) => (
+              <CarouselItem key={item.id} {...item} />
             ))}
           </Carousel>
         </Categories>
@@ -36,14 +36,15 @@ const App = () => {
         </Carousel>
       </Categories>
 
-      {initialState.originals &&
+      {initialState.originals && (
         <Categories title="Especiales de Platzi Video">
-        <Carousel>
-          {initialState.originals.map(item=>(
-            <CarouselItem key={item.id} {...item}/>
-          ))}
-        </Carousel>
-      </Categories>}
+          <Carousel>
+            {initialState.originals.map((item) => (
+              <CarouselItem key={item.id} {...item} />
+            ))}
+          </Carousel>
+        </Categories>
+      )}
       <Footer></Footer>
     </div>
   );
